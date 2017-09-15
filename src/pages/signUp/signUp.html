@@ -1,0 +1,81 @@
+<!--
+  Generated template for the SignUpPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-content padding>
+
+   <h4 class="wrapper" align="center">Re Use</h4>
+
+   <h5 align="center">SIGNUP SCREEN</h5>
+
+    <form class="login-form-wrapper" [formGroup]="sampleForm" (ngSubmit)="submit(sampleForm.value)">
+        <ion-list>
+            <ion-item>
+                <ion-label stacked>Aadhar No.:</ion-label>
+                <ion-input type="number" formControlName="aadharno"></ion-input>
+            </ion-item>
+            <div class="error-container" *ngIf="formErrors.aadharno">
+                <div *ngFor="let errors of formErrors.aadharno">
+                    <p class="alert-danger">{{ errors }}</p>
+                </div>
+            </div>
+
+            <ion-item>
+                <ion-label stacked>Email:</ion-label>
+                <ion-input type="text" formControlName="email"></ion-input>
+            </ion-item>
+            
+            <div class="error-container" *ngIf="formErrors.email">
+                <div *ngFor="let errors of formErrors.email">
+                    <p class="alert-danger">{{ errors }}</p>
+                </div>
+            </div>
+       
+            <ion-item>
+                <ion-label stacked>Mobile:</ion-label>
+                <ion-input type="number" formControlName="mobile"></ion-input>
+            </ion-item>
+
+            <div class="error-container" *ngIf="formErrors.mobile">
+                <div *ngFor="let errors of formErrors.mobile">
+                    <p class="alert-danger">{{ errors }}</p>
+                </div>
+            </div>
+
+        <ion-item>
+                <ion-label stacked>Password</ion-label>
+                <ion-input type="password" formControlName="password"></ion-input>
+            </ion-item>
+            <div class="error-container" *ngIf="formErrors.password">
+                <div *ngFor="let errors of formErrors.password">
+                    <p class="alert-danger">{{ errors }}</p>
+                </div>
+            </div>
+
+ </ion-list>
+        <ion-item>
+                <ion-label stacked>Re-Password</ion-label>
+                <ion-input type="password" formControlName="confirmPassword" validateEqual="password" reverse="false"></ion-input>
+            </ion-item>
+            <div class="error-container" *ngIf="formErrors.confirmPassword">
+                <div *ngFor="let errors of formErrors.confirmPassword">
+                    <p class="alert-danger">{{ errors }}</p>
+                </div>
+            </div>    
+
+          <div text-center margin-top>
+            <button ion-button round type="submit" class="button1" [disabled]="!sampleForm.valid">SIGN UP</button>
+    
+            <button ion-button round type="button" class="button2" (click)="homepage()">RESET</button>
+        </div>
+    </form>
+
+<p>Already got an account?</p>
+
+<p align="right"><a href="#" class="wrapper" (click)="Signinpage()">Log In Here</a></p>
+
+    </ion-content>

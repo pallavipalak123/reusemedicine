@@ -1,0 +1,16 @@
+import { NgModule } from '@angular/core';
+import { IonicPageModule } from 'ionic-angular';
+import { AccountdetailsPage } from './accountdetails';
+
+@NgModule({
+  declarations: [
+    AccountdetailsPage,
+  ],
+  imports: [
+    IonicPageModule.forChild(AccountdetailsPage),
+  ],
+  exports: [
+    AccountdetailsPage
+  ]
+})
+export class AccountdetailsPageModule {}

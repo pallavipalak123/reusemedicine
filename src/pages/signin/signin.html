@@ -1,0 +1,44 @@
+<!--
+  Generated template for the SigninPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-content padding>
+
+ <h4 class="wrapper" align="center">Re Use</h4>
+
+<h5 align="center">LOGIN SCREEN</h5>
+
+<form class="login-form-wrapper" [formGroup]="sampleForm" (ngSubmit)="submit(sampleForm.value)" >
+        <ion-list>
+            <ion-item>
+                <ion-label stacked>Aadhar No or Email:</ion-label>
+                <ion-input type="text" formControlName="aadharoremail"></ion-input>
+            </ion-item>
+        
+            <ion-item>
+                <ion-label stacked>Password:</ion-label>
+                <ion-input type="password" formControlName="password"></ion-input>
+            </ion-item>
+            
+        </ion-list>
+
+
+<ion-item>
+    <ion-label><a class="wrapper" align="left" href=www.rememberme.com>Remember Me</a></ion-label>
+</ion-item>
+
+
+  <button ion-button round type="submit" class="button4" >LOGIN</button>
+  <p align="right"><a href="#" class="wrapper" (click)="Forgotpasswordpage();">Forgot Password</a></p>
+
+
+<p>Don't have an account?</p>
+
+<p align="right"><a href="#" class="wrapper" (click)="SignUppage();">Sign up Here</a></p>
+</form>
+
+</ion-content>

@@ -1,0 +1,33 @@
+<!--
+  Generated template for the DroplocationsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+<ion-content padding>
+
+<h4 class="wrapper" align="center">Re Use</h4>
+
+<h5 align="center">Drop Locations</h5>
+
+<p align="center">Enter your Post Code</p>
+
+
+    <ion-input type="number" class="border" placeholder="Enter only 6 digits"></ion-input>
+
+<p align="center">Or</p>
+
+<button ion-button icon-right class="button1" align="center" (click)="location()">
+Use My Current Location
+<ion-icon name="locate"></ion-icon>
+</button>
+
+<button ion-button round type="submit" class="button2" align="center" (click)="findnearest()" >Find Nearest</button><br>
+<div #map id="map"></div>
+</ion-content>
+
+
+

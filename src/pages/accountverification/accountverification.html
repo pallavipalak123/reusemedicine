@@ -1,0 +1,44 @@
+<!--
+  Generated template for the AccountverificationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-content padding>
+
+  <ion-title align="center" class="title">Account Verification</ion-title>
+
+  <p align="center">Sit back & Relax!<br>while we verify your<br> mobile number</p>
+
+  <p align="center">(Enter the OTP below in<br>case if we fail to detect<br>the SMS automatically)</p>
+
+<form class="login-form-wrapper" [formGroup]="sampleForm" (ngSubmit)="submit(sampleForm.value)">
+
+
+  <ion-item>
+    <ion-input type="number" formControlName="otp" placeholder="Enter OTP"></ion-input>
+  </ion-item>
+  <div class="error-container" *ngIf="formErrors.otp">
+                <div *ngFor="let errors of formErrors.otp">
+                    <p class="alert-danger">{{ errors }}</p>
+                </div>
+            </div>
+
+  <div text-center margin-top>
+    <button ion-button round type="submit" class="button1" [disabled]="!sampleForm.valid" (click)="accountconfirmationpage()">SUBMIT</button>
+
+    <button ion-button round type="button" class="button2" (click)="signUppage();">CANCEL</button>
+  </div>
+  
+  
+</form>
+
+  <button ion-button round type="button" class="button3">Resend OTP</button>
+
+  <p class="note" align="center">Note: If you do not receive your OTP within<br> 10 minutes,you may request for another<br> OTP by clicking on the 'Resend
+    OTP'</p>
+
+
+</ion-content>
